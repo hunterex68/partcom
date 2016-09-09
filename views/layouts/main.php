@@ -76,7 +76,7 @@ $this->beginPage() ?>
         <div class="title" style="margin-bottom:100px;">
             <h1>Все, что Вам нужно находится здесь!</h1>
             <h2>любые запчасти на автомобиль.</h2>
-            <form action="find.php" id="findform">
+            <form action="find" id="findform" role="search">
                 <input type="text" name="oem" value="" class="control" placeholder="VIN-код">
 
                 <span class="find"><i class="glyphicon glyphicon-lupa" onClick="document.forms[0].submit();"></i></span>
@@ -86,7 +86,7 @@ $this->beginPage() ?>
                 </textarea>
             </form>
         </div>
-<?= $content ?>
+
         <div class="content-wellcom">
             <div class="content-info clearfix">
 
@@ -143,12 +143,12 @@ $this->beginPage() ?>
                     </div>
                 </div>
             </div>
-
+        <?= $content ?>
         <div class="title" style="padding:50px 0;">
             <h2 >У вас остались вопросы?</h2>
 
             <div role="form" class="feedback">
-                <form action="feedback.php" method="post" class="form">
+                <form action="feedback" method="post" class="form">
                     <div style="margin:0 30%;position:relative;text-align:center">
                         <input type="text" size="80px" name="name" value="" class="inputctrl" required placeholder="Ваше имя">
 
@@ -209,7 +209,6 @@ $this->beginPage() ?>
                     </div>
                 </div> <!-- / END CLIENT INFORMATION-->
             </div> <!-- / END SINGLE FEEDBACK BOX-->
-            </aside>
         </div>
 
     </section>
@@ -231,37 +230,37 @@ $this->beginPage() ?>
                     <div class="col-6">
                         <ul>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_begin">Как начать работу</a></li>
+                                <a href="/instructions/how_to_begin">Как начать работу</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#search">Как искать товар</a></li>
+                                <a href="/instructions/how_to_order/search">Как искать товар</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#basket">Как работать с корзиной</a></li>
+                                <a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#order">Как оформить заказ</a></li>
+                                <a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_pay">Как оплатить заказ</a></li>
+                                <a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_send">Как отправить товар</a></li>
+                                <a href="/instructions/how_to_send">Как отправить товар</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_ask_question">Как задать вопрос менеджеру</a></li>
+                                <a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul>
                             <li>
-                                <a href="Instructions.aspx?page=discount_sheet">Объемные скидки</a></li>
+                                <a href="/instructions/discount_sheet">Объемные скидки</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=pricelists_sheet">Типы прайслистов</a></li>
+                                <a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=web_services">Веб-сервисы</a></li>
+                                <a href="/instructions/web_services">Веб-сервисы</a></li>
                             <li>
-                                <a href="Page.aspx?page=termsandconditions">Договор сотрудничества</a></li>
+                                <a href="/Page/termsandconditions">Договор сотрудничества</a></li>
                             <li>
-                                <a href="Page.aspx?page=about">О компании</a></li>
+                                <a href="/Page/about">О компании</a></li>
                             <li>
-                                <a href="Page.aspx?page=contacts">Контакты</a></li>
+                                <a href="/Page/contacts">Контакты</a></li>
                             <li>
-                                <a href="ContentList.aspx?gkey=site_news">Архив новостей</a></li>
+                                <a href="/ContentList/site_news">Архив новостей</a></li>
                         </ul>
                     </div>
                 </div>
