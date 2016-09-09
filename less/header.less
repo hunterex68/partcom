@@ -1,0 +1,39 @@
+@import "variables.less";
+@import "mixins.less";
+header
+{
+  opacity:.9;
+  height: 130px;
+  --line-height: 3;
+  font-size: @font-size;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  margin:0 ;
+  border-bottom:3px solid orange;
+  background-color: #bad3cd;
+  z-index:999;
+  .nav
+  {
+    margin-left: 100px;
+    li
+    {
+      display: list-item;
+      list-style: none;
+      float:left;
+      padding:2px;
+      line-height:4;
+    }
+    li a
+    {
+      text-decoration: none;
+      color:@color;
+      .btn;
+    }
+    li:hover
+    {
+      border-bottom:7px solid orange;
+    }
+  }
+}

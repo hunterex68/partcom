@@ -1,0 +1,61 @@
+@media (max-width:@device-midi)
+{
+	header
+	{
+		position:fixed;
+		height: 150px;
+	    line-height: 18px;
+	    font-size: @font-size;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    background-color:#FFF;
+
+    	.nav 
+		{
+			li
+			{
+				display: list-item;
+				list-style: none;
+				float:left; 
+				padding:2px;
+				.btn;
+				width:40%;
+				border:1px solid @gray-color;
+			}
+			li a
+			{
+				text-decoration: none;
+				color:white;
+				.btn;
+			}
+		}			
+	}
+	header::before
+	{
+		content: '';
+	    display: block;
+	    z-index: -1;
+	    height: 0;
+	    
+	}
+	.logo
+	{
+		width:100%;
+		
+		font-size:@font-size;
+		margin: 0 10px;
+		border:0;
+		color:@font-color;
+		border-radius:0;
+		background-color:transparent;
+		float:none;
+		text-align:center;
+	}
+	
+	.content
+	{
+		width:100%;
+	}
+}
