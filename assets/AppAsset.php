@@ -10,7 +10,7 @@ namespace app\assets;
 use yii\web\AssetBundle;
 
 /**
- * @author Qiang Xue <qiang.xue@gmail.com>
+ * @author Ochotnichenko oleg aka Alex Hunt <ohunterexe@gmail.com>
  * @since 2.0
  */
 class AppAsset extends AssetBundle
@@ -18,13 +18,15 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/bootstrap.css',
-        'css/header.css',
-        'css/style.css',
 
+        'css/style.css',
+        'css/social.css',
+        '//fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic',
+        '//fonts.googleapis.com/css?family=Comfortaa|Cuprum|Lobster|Open+Sans+Condensed:300|PT+Sans+Narrow|Pattaya|Audiowide|Boogaloo|Comfortaa|Exo+2|Farsan|Gruppo|Jura|Pompiere|Squada+One|Ubuntu+Condensed|Unica+One',
     ];
     public $js = [
-        'js/bootstrap.js',
+
+        //'//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

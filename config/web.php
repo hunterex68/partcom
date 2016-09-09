@@ -3,8 +3,11 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'basic',
+    'id' => 'partcom',
     'basePath' => dirname(__DIR__),
+    'name' => 'PartComUa',
+    'language' => 'ru-RU',
+
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
@@ -38,14 +41,14 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];

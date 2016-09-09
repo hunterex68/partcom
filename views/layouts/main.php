@@ -1,79 +1,25 @@
-<?
+﻿<?
 use app\assets\AppAsset;
-?>
+use yii\helpers\Html;
+AppAsset::register($this);
+$this->beginPage() ?>
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Сайт автозапчастей"/>
     <link rel="icon" href="/favicon.png"/>
     <title>Интернет-магазин автозапчастей</title>
-    <?
 
-    AppAsset::register($this);
-
-    ?>
-    <link rel="stylesheet" type="text/css" href="css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/social.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cuprum|Lobster|Open+Sans+Condensed:300|PT+Sans+Narrow|Pattaya|Audiowide|Boogaloo|Comfortaa|Exo+2|Farsan|Gruppo|Jura|Pompiere|Squada+One|Ubuntu+Condensed|Unica+One" rel="stylesheet">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 
 </head>
 <body>
-<?
-/*
-NavBar::begin([
-    'brandLabel' => 'Yii Navbar',
-    'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-        'class' => 'navbar-default'
-    ]
-]);
-echo Nav::widget([
-    'options' => [
-        'class' => 'navbar-nav navbar-right'
-    ],
-    'items' => [
-        [
-            'label' => 'Главная',
-            'url' => [
-                '#'
-            ]
-        ],
-        [
-            'label' => 'About',
-            'url' => [
-                '#'
-            ]
-        ],
-        [
-            'label' => 'Обратная связь',
-            'url' => [
-                '#'
-            ]
-        ],
-        Yii::$app->user->isGuest ? [
-            'label' => 'Войти',
-            'url' => [
-                '#'
-            ]
-        ] : [
-            'label' => 'Выйти ('.Yii::$app->user->identity->username.')',
-            'url' => [
-                '#'
-            ],
-            'linkOptions' => [
-                'data-method' => 'post'
-            ]
-        ]
-    ]
-]);
-NavBar::end();*/
-
-?>
+<?php $this->beginBody();?>
 <header>
     <div class='col-md-2'>LANA</div>
     <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
@@ -140,7 +86,7 @@ NavBar::end();*/
                 </textarea>
             </form>
         </div>
-
+<?= $content ?>
         <div class="content-wellcom">
             <div class="content-info clearfix">
 
@@ -341,6 +287,13 @@ NavBar::end();*/
         <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
     </div>
 </footer>
+        <noindex>
+            <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script >
+            <script type="text/javascript">var salesupwidgetcomuid="1603";</script>
+        </noindex>
+        <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>
+
 
