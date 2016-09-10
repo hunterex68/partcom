@@ -1,1 +1,53 @@
-@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}.btn{--display:block;padding:5px}.btn-success{background-color:#191;color:#29e729}header{opacity:.9;height:130px;--line-height:3;font-size:16px;position:fixed;top:0;left:0;width:100%;margin:0;border-bottom:3px solid orange;background-color:#bad3cd;z-index:999}header .nav{margin-left:100px}header .nav li{display:list-item;list-style:none;float:left;padding:2px;line-height:4}header .nav li a{text-decoration:none;color:#000;--display:block;padding:5px}header .nav li:hover{border-bottom:7px solid orange}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.btn {
+    --display: block;
+    padding: 5px;
+}
+
+.btn-success {
+    background-color: #119911;
+    color: #29e729;
+}
+
+header {
+    opacity: .9;
+    height: 130px;
+    --line-height: 3;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border-bottom: 3px solid orange;
+    background-color: #bad3cd;
+    z-index: 999;
+}
+
+header .nav {
+    margin-left: 100px;
+}
+
+header .nav li {
+    display: list-item;
+    list-style: none;
+    float: left;
+    padding: 2px;
+    line-height: 4;
+}
+
+header .nav li a {
+    text-decoration: none;
+    color: #000000;
+    --display: block;
+    padding: 5px;
+}
+
+header .nav li:hover {
+    border-bottom: 7px solid orange;
+}

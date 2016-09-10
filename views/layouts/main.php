@@ -1,79 +1,25 @@
-<?
+﻿<?
 use app\assets\AppAsset;
-?>
+use yii\helpers\Html;
+AppAsset::register($this);
+$this->beginPage() ?>
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Сайт автозапчастей"/>
     <link rel="icon" href="/favicon.png"/>
     <title>Интернет-магазин автозапчастей</title>
-    <?
 
-    AppAsset::register($this);
-
-    ?>
-    <link rel="stylesheet" type="text/css" href="css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/social.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cuprum|Lobster|Open+Sans+Condensed:300|PT+Sans+Narrow|Pattaya|Audiowide|Boogaloo|Comfortaa|Exo+2|Farsan|Gruppo|Jura|Pompiere|Squada+One|Ubuntu+Condensed|Unica+One" rel="stylesheet">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 
 </head>
 <body>
-<?
-/*
-NavBar::begin([
-    'brandLabel' => 'Yii Navbar',
-    'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-        'class' => 'navbar-default'
-    ]
-]);
-echo Nav::widget([
-    'options' => [
-        'class' => 'navbar-nav navbar-right'
-    ],
-    'items' => [
-        [
-            'label' => 'Главная',
-            'url' => [
-                '#'
-            ]
-        ],
-        [
-            'label' => 'About',
-            'url' => [
-                '#'
-            ]
-        ],
-        [
-            'label' => 'Обратная связь',
-            'url' => [
-                '#'
-            ]
-        ],
-        Yii::$app->user->isGuest ? [
-            'label' => 'Войти',
-            'url' => [
-                '#'
-            ]
-        ] : [
-            'label' => 'Выйти ('.Yii::$app->user->identity->username.')',
-            'url' => [
-                '#'
-            ],
-            'linkOptions' => [
-                'data-method' => 'post'
-            ]
-        ]
-    ]
-]);
-NavBar::end();*/
-
-?>
+<?php $this->beginBody();?>
 <header>
     <div class='col-md-2'>LANA</div>
     <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
@@ -130,7 +76,7 @@ NavBar::end();*/
         <div class="title" style="margin-bottom:100px;">
             <h1>Все, что Вам нужно находится здесь!</h1>
             <h2>любые запчасти на автомобиль.</h2>
-            <form action="find.php" id="findform">
+            <form action="find" id="findform" role="search">
                 <input type="text" name="oem" value="" class="control" placeholder="VIN-код">
 
                 <span class="find"><i class="glyphicon glyphicon-lupa" onClick="document.forms[0].submit();"></i></span>
@@ -197,12 +143,12 @@ NavBar::end();*/
                     </div>
                 </div>
             </div>
-
+        <?= $content ?>
         <div class="title" style="padding:50px 0;">
             <h2 >У вас остались вопросы?</h2>
 
             <div role="form" class="feedback">
-                <form action="feedback.php" method="post" class="form">
+                <form action="feedback" method="post" class="form">
                     <div style="margin:0 30%;position:relative;text-align:center">
                         <input type="text" size="80px" name="name" value="" class="inputctrl" required placeholder="Ваше имя">
 
@@ -263,7 +209,6 @@ NavBar::end();*/
                     </div>
                 </div> <!-- / END CLIENT INFORMATION-->
             </div> <!-- / END SINGLE FEEDBACK BOX-->
-            </aside>
         </div>
 
     </section>
@@ -285,37 +230,37 @@ NavBar::end();*/
                     <div class="col-6">
                         <ul>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_begin">Как начать работу</a></li>
+                                <a href="/instructions/how_to_begin">Как начать работу</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#search">Как искать товар</a></li>
+                                <a href="/instructions/how_to_order/search">Как искать товар</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#basket">Как работать с корзиной</a></li>
+                                <a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_order#order">Как оформить заказ</a></li>
+                                <a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_pay">Как оплатить заказ</a></li>
+                                <a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_send">Как отправить товар</a></li>
+                                <a href="/instructions/how_to_send">Как отправить товар</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=how_to_ask_question">Как задать вопрос менеджеру</a></li>
+                                <a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul>
                             <li>
-                                <a href="Instructions.aspx?page=discount_sheet">Объемные скидки</a></li>
+                                <a href="/instructions/discount_sheet">Объемные скидки</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=pricelists_sheet">Типы прайслистов</a></li>
+                                <a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
                             <li>
-                                <a href="Instructions.aspx?page=web_services">Веб-сервисы</a></li>
+                                <a href="/instructions/web_services">Веб-сервисы</a></li>
                             <li>
-                                <a href="Page.aspx?page=termsandconditions">Договор сотрудничества</a></li>
+                                <a href="/Page/termsandconditions">Договор сотрудничества</a></li>
                             <li>
-                                <a href="Page.aspx?page=about">О компании</a></li>
+                                <a href="/Page/about">О компании</a></li>
                             <li>
-                                <a href="Page.aspx?page=contacts">Контакты</a></li>
+                                <a href="/Page/contacts">Контакты</a></li>
                             <li>
-                                <a href="ContentList.aspx?gkey=site_news">Архив новостей</a></li>
+                                <a href="/ContentList/site_news">Архив новостей</a></li>
                         </ul>
                     </div>
                 </div>
@@ -341,6 +286,13 @@ NavBar::end();*/
         <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
     </div>
 </footer>
+        <noindex>
+            <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script >
+            <script type="text/javascript">var salesupwidgetcomuid="1603";</script>
+        </noindex>
+        <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>
+
 
