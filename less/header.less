@@ -2,19 +2,17 @@
 @import "mixins.less";
 header
 {
-  opacity:.9;
+
   height: 130px;
-  --line-height: 3;
-  font-size: @font-size;
   position: fixed;
   top:0;
   left: 0;
   width: 100%;
   margin:0 ;
-  border-bottom:3px solid orange;
-  background-color: #bad3cd;
+  border-bottom:1px solid orange;
+  background-color: #ffffff;
   z-index:999;
-  .nav
+  .new_nav
   {
     margin-left: 100px;
     li
@@ -22,18 +20,20 @@ header
       display: list-item;
       list-style: none;
       float:left;
-      padding:2px;
+      padding:20px 3px;
       line-height:4;
+
     }
     li a
     {
       text-decoration: none;
       color:@color;
+      font-size: @font-size*1.2;
       .btn;
     }
     li:hover
     {
-      border-bottom:7px solid orange;
+
     }
   }
 }

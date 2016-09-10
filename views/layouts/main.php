@@ -1,6 +1,7 @@
 ﻿<?
 use app\assets\AppAsset;
 use yii\helpers\Html;
+
 AppAsset::register($this);
 $this->beginPage() ?>
 
@@ -19,72 +20,78 @@ $this->beginPage() ?>
 
 </head>
 <body>
-<?php $this->beginBody();?>
+<?php $this->beginBody(); ?>
 <header>
-    <div class='col-md-2'>LANA</div>
-    <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
-        <a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
+    <div class="row">
+        <div class='col-md-2 logo'>LANA</div>
+        <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
+            <a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
 
-    </div-->
-
-
-
+        </div-->
 
 
-    <div class="col-md-8 content">
-        <ul class="nav">
-            <li>
-                <a class="nav-link" href="javascript:;">Главная</a>
-            </li>
-            <li>
-                <a class="nav-link" href="javascript:;">Каталоги</a>
-            </li>
-            <li >
-                <a class="nav-link" href="/site/about">О нас</a>
-            </li>
-            <li>
-                <a href="/site/contact">Контакты</a>
-            </li>
+        <div class="col-md-7">
+            <ul class="new_nav">
+                <li>
+                    <a class="nav-link" href="javascript:;">Главная</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="javascript:;">Каталоги</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/site/about">О нас</a>
+                </li>
+                <li>
+                    <a href="/site/contact">Контакты</a>
+                </li>
 
-            <li id="enter"><a class="nav-link disabled" href="/site/login">Вход</a></li>
+                <li id="enter"><a class="nav-link disabled" href="/site/login">Вход</a></li>
 
-        </ul>
+            </ul>
+        </div>
+        <div class="col-md-3" style="padding:10px 0px 10px 150px;">
+            <p>+38 (050)32-555-23</p>
+            <p>+38 (067)67-67-464</p>
+            <p>+38 (093)939-68-68</p>
+            <p><a href="javascript;:" style="color:lightblue">заказать обратный звонок</a></p>
+        </div>
+        <!--div class="social">
+            <ul class="nav">
+                <li>
+                    <a href="https://www.facebook.com/sharer.php?u=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank"  class="social-icon"><span class="symbol">facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">googleplus</span></a>
+                </li>
+                <li>
+                    <a href="https://pinterest.com/pin/create/bookmarklet/?url=http://part.com.ua/get-assisted-experts-stay-loaded-online&amp;description=Get%20Assisted%20By%20Experts%20To%20Stay%20Loaded%20Online!" target="_blank" class="social-icon"><span class="symbol">pinterest</span></i></a>
+                </li>
+            </ul>
+        </div-->
     </div>
-    <div class="col-md-2">+38 (050) 32-555-23</div>
-    <!--div class="social">
-        <ul class="nav">
-            <li>
-                <a href="https://www.facebook.com/sharer.php?u=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank"  class="social-icon"><span class="symbol">facebook</span></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">twitter</span></a>
-            </li>
-            <li>
-                <a href="https://plus.google.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">googleplus</span></a>
-            </li>
-            <li>
-                <a href="https://pinterest.com/pin/create/bookmarklet/?url=http://part.com.ua/get-assisted-experts-stay-loaded-online&amp;description=Get%20Assisted%20By%20Experts%20To%20Stay%20Loaded%20Online!" target="_blank" class="social-icon"><span class="symbol">pinterest</span></i></a>
-            </li>
-        </ul>
-    </div-->
-
 </header>
 <div style='clear:both'></div>
 <div class="container">
     <section>
 
-        <div class="title" style="margin-bottom:100px;">
-            <h1>Все, что Вам нужно находится здесь!</h1>
-            <h2>любые запчасти на автомобиль.</h2>
-            <form action="find" id="findform" role="search">
-                <input type="text" name="oem" value="" class="control" placeholder="VIN-код">
+        <div class="row title" style="margin-bottom:100px;">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Все, что Вам нужно находится здесь!</h1>
+                <h2>любые запчасти на автомобиль.</h2>
+                <form action="find" id="findform" class="form-inline" role="search">
+                    <input type="text" name="oem" value="" class="form-control" placeholder="VIN-код">
 
-                <span class="find"><i class="glyphicon glyphicon-lupa" onClick="document.forms[0].submit();"></i></span>
-                <div style="clear:both;"></div>
+                    <span class="find"><i class="glyphicon glyphicon-lupa"
+                                          onClick="document.forms[0].submit();"></i></span>
+                    <div style="clear:both;"></div>
                 <textarea placeholder="Список необходимых деталей" cols="80" rows="15">
 
                 </textarea>
-            </form>
+                </form>
+            </div>
         </div>
 
         <div class="content-wellcom">
@@ -96,67 +103,77 @@ $this->beginPage() ?>
 
                 </div>
 
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>1. Невысокая цена</h2>
-                            80% предложений на рынке - посредники. И посредники посредников. Соответственно наценка составляет от 100 до 300%. Наша цена устанавливается непосредственно как цена производителя
-                        </div>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>1. Невысокая цена</h2>
+                        80% предложений на рынке - посредники. И посредники посредников. Соответственно наценка
+                        составляет от 100 до 300%. Наша цена устанавливается непосредственно как цена производителя
                     </div>
+                </div>
 
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>2. Нет скрытых платежей</h2>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>2. Нет скрытых платежей</h2>
 
-                            По телефону озвучивается привлекательная стоимость, а на деле же получается совсем другое - надбавка идет за любые дополнительные расходы. Деньги теряете Вы. У нас нет скрытых платежей!
-                        </div>
+                        По телефону озвучивается привлекательная стоимость, а на деле же получается совсем другое -
+                        надбавка идет за любые дополнительные расходы. Деньги теряете Вы. У нас нет скрытых платежей!
                     </div>
+                </div>
 
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>3. Ценим клиента</h2>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>3. Ценим клиента</h2>
 
-                            Мы принимаем любую форму оплаты, которая удобна для клиента, а для постоянных заказчиков действуют приятные скидки. Если у вас нет возможности вывезти товар самостоятельно, мы подыщем транспорт по минимальной цене, проложив при этом оптимальный маршрут до пункта назначения
-                        </div>
+                        Мы принимаем любую форму оплаты, которая удобна для клиента, а для постоянных заказчиков
+                        действуют приятные скидки. Если у вас нет возможности вывезти товар самостоятельно, мы подыщем
+                        транспорт по минимальной цене, проложив при этом оптимальный маршрут до пункта назначения
                     </div>
+                </div>
 
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>4. Профессионализм</h2>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>4. Профессионализм</h2>
 
-                            Долгий период усиленной работы в сфере торговли автозапчастями, а также тысячи тонн отгруженного товара позволяют нам гарантировать качество продукции и своевременную доставку каждой партии
-                        </div>
+                        Долгий период усиленной работы в сфере торговли автозапчастями, а также тысячи тонн отгруженного
+                        товара позволяют нам гарантировать качество продукции и своевременную доставку каждой партии
                     </div>
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>5. Большой опыт</h2>
+                </div>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>5. Большой опыт</h2>
 
-                            В нашей стране этим видом топлива стали пользоваться лишь в середине 2000-х, в то время как европейцы и американцы активно используют пеллеты в качестве эффективного сырья для отопления уже в течение тридцати лет
-                        </div>
+                        В нашей стране этим видом топлива стали пользоваться лишь в середине 2000-х, в то время как
+                        европейцы и американцы активно используют пеллеты в качестве эффективного сырья для отопления
+                        уже в течение тридцати лет
                     </div>
+                </div>
 
-                    <div class="col-3 pan">
-                        <div class="text-center">
-                            <h2>6. Только качество</h2>
+                <div class="col-3 pan">
+                    <div class="text-center">
+                        <h2>6. Только качество</h2>
 
-                            Мы гарантируем качество каждой отгруженной партии товара и несем полную ответственность за продукт. Доставка крупных партий товара осуществляется в срок от 1 до 5 дней
-                        </div>
+                        Мы гарантируем качество каждой отгруженной партии товара и несем полную ответственность за
+                        продукт. Доставка крупных партий товара осуществляется в срок от 1 до 5 дней
                     </div>
                 </div>
             </div>
+        </div>
         <?= $content ?>
         <div class="title" style="padding:50px 0;">
-            <h2 >У вас остались вопросы?</h2>
+            <h2>У вас остались вопросы?</h2>
 
             <div role="form" class="feedback">
                 <form action="feedback" method="post" class="form">
                     <div style="margin:0 30%;position:relative;text-align:center">
-                        <input type="text" size="80px" name="name" value="" class="inputctrl" required placeholder="Ваше имя">
+                        <input type="text" size="80px" name="name" value="" class="inputctrl" required
+                               placeholder="Ваше имя">
 
-                        <input type="email" size="80px" name="email" value="" class="inputctrl" required placeholder="Ваш E-mail">
+                        <input type="email" size="80px" name="email" value="" class="inputctrl" required
+                               placeholder="Ваш E-mail">
 
                         <input type="text" size="80px" name="subject" value="" class="inputctrl" placeholder="Тема">
 
-                        <textarea name="message" cols="80" rows="10" class="inputctrl" ></textarea>
+                        <textarea name="message" cols="80" rows="10" class="inputctrl"></textarea>
                         <br/>
                         <input type="submit" value="Отправить" class=" inputctrl btn btn-success">
                     </div>
@@ -182,7 +199,7 @@ $this->beginPage() ?>
             </div> <!-- / END SINGLE FEEDBACK BOX-->
             <div class="feedback-box col-3">
                 <div class="message">
-                    Адекватные люди всегда перезванивают если видят ,что у них на телефоне пропущенные вызовы!
+                    Адекватные люди всегда перезванивают если видят, что у них на телефоне пропущенные вызовы!
                 </div>
                 <div class="client">
                     <div class="quote red-text">
@@ -266,14 +283,10 @@ $this->beginPage() ?>
                 </div>
 
 
-
             </div>
 
 
-
             <div class="SimpleText">
-
-
 
 
             </div>
@@ -281,14 +294,14 @@ $this->beginPage() ?>
 
         </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
-    </div>
-</footer>
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
+            </div>
+        </footer>
         <noindex>
-            <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script >
-            <script type="text/javascript">var salesupwidgetcomuid="1603";</script>
+            <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script>
+            <script type="text/javascript">var salesupwidgetcomuid = "1603";</script>
         </noindex>
         <?php $this->endBody() ?>
 </body>
