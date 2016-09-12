@@ -22,21 +22,35 @@ $this->beginPage() ?>
 <body>
 <?php $this->beginBody(); ?>
 <header>
-    <div class="row hdr">
+    <div class="container">
+        <div class="row">
+            <div class="hdr clearfix">
         <div class='col-md-2 logo'>LANA</div>
         <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
             <a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
 
         </div-->
         <div class="col-md-3 col-md-push-7 rightphone">
-            +38 (050)32-555-23<br/>
-            +38 (067)67-67-464<br/>
-            +38 (093)939-68-68<br/>
-            <p><a href="javascript;:">заказать обратный звонок</a></p>
+            <div class="phones">
+                <div class="phone">
+                    <i class="glyphicon glyphicon-phone"></i>
+                    +38 (050)32-555-23</a>
+                </div>
+                <div class="phone">
+                    <i class="glyphicon glyphicon-phone"></i>
+                    +38 (067)67-67-464
+                </div>
+                <div class="phone">
+                    <i class="glyphicon glyphicon-phone"></i>
+                    +38 (093)939-68-68
+                </div>
+                <a href="#" class="callback">Заказать обратный вызов</a>
+            </div>
+
         </div>
         <div class="col-md-7 col-md-pull-3">
-            <nav>
-                <ul class="clearfix">
+            <nav style="text-align: center" class="clearfix">
+                <ul class="main-menu">
                     <li class="active">
                         <a class="nav-link" href="javascript:;">Главная</a>
                     </li>
@@ -72,13 +86,14 @@ $this->beginPage() ?>
             </ul>
         </div-->
     </div>
+        </div>
 </header>
 <div style='clear:both'></div>
-<div class="container">
+<div class="container2">
     <section>
 
         <div class="row title" style="margin-bottom:100px;">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
                 <h1>Все, что Вам нужно находится здесь!</h1>
                 <h2>любые запчасти на автомобиль.</h2>
                 <form action="find" id="findform" class="form-inline" role="search">

@@ -1,14 +1,15 @@
+@import 'mixins.less';
 header
 {
 
-  height: 130px;
+  min-height: 60px;
   position: fixed;
   top:0;
   left: 0;
   width: 100%;
   margin:0 ;
-  border-bottom:1px solid orange;
-  background-color: #ffffff;
+
+  background-color: #767676;
   z-index:999;
    .hdr
    {
@@ -17,79 +18,73 @@ header
    }
   nav
   {
-
+    line-height: 5;
     ul
     {
       list-style-type: none;
-      display:block;
-      float:left;
+      padding: 0;
+      margin: 0;
+
     }
     li
     {
       display: inline-block;
       list-style: none;
-      float:left;
-      padding:20px 3px;
-      line-height:4;
-
     }
     li a
     {
       text-decoration: none;
-      color:@color;
+      color: #CCC;
       font-size: @font-size*1.2;
       .btn;
+      .transition;
     }
-    li:hover
+    li a:hover
     {
-
+      color: #555;
     }
   }
-
+  .main-menu {
+    text-align: center;
+  }
   .logo
   {
     font-weight:bold;
     font-family:@font-logo;
     overflow: hidden;
-    color:orange;
-
+    color: #646464;
+    line-height: 2;
 
     text-align: center;
-    line-height: 1;
+
 
     float:left;
-    padding:20px 3px;
-    font-size:@font-size*4;
+
+    font-size: @font-size*3;
 
   }
+  .phones {
+    text-align: right;
+    font-size: em(20px);
+  }
 
+  .callback {
+    color: #8c8c8c;
+    text-decoration: none;
+    border-bottom: 1px dashed #8c8c8c;
+    .transition;
+  }
+  .callback:hover {
+    border-color: transparent;
+    text-decoration: none;
+    color: #333;
+  }
   .rightphone
   {
-    padding:5px 0px 5px 150px;
+    padding: 5px 10px;
     overflow: hidden;
-
     font-family:@font-phone;
-    font-size:@font-size*1.2;
+    color: whitesmoke;
   }
-  .rightphone a{
-    color: #faffff;
-    text-decoration:underline;
-  }
-  .rightphone:before {
-    content: "";
-    position: absolute;
-    width: 160%;
-    height: 250%;
-    top: 0;
-    left: -110px;
-    z-index: -1;
-    background: -moz-linear-gradient(left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%);
-    -webkit-transform: rotate(130deg);
-    -moz-transform: rotate(130deg);
-    -ms-transform: rotate(130deg);
-    -o-transform: rotate(130deg);
-    transform: rotate(130deg);
-    transform: rotate(130deg);
-  }
+
 }
