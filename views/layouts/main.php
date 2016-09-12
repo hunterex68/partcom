@@ -22,38 +22,38 @@ $this->beginPage() ?>
 <body>
 <?php $this->beginBody(); ?>
 <header>
-    <div class="row">
+    <div class="row hdr">
         <div class='col-md-2 logo'>LANA</div>
         <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
             <a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
 
         </div-->
-
-
-        <div class="col-md-7">
-            <ul class="new_nav">
-                <li>
-                    <a class="nav-link" href="javascript:;">Главная</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="javascript:;">Каталоги</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/site/about">О нас</a>
-                </li>
-                <li>
-                    <a href="/site/contact">Контакты</a>
-                </li>
-
-                <li id="enter"><a class="nav-link disabled" href="/site/login">Вход</a></li>
-
-            </ul>
+        <div class="col-md-3 col-md-push-7 rightphone">
+            +38 (050)32-555-23<br/>
+            +38 (067)67-67-464<br/>
+            +38 (093)939-68-68<br/>
+            <p><a href="javascript;:">заказать обратный звонок</a></p>
         </div>
-        <div class="col-md-3" style="padding:10px 0px 10px 150px;">
-            <p>+38 (050)32-555-23</p>
-            <p>+38 (067)67-67-464</p>
-            <p>+38 (093)939-68-68</p>
-            <p><a href="javascript;:" style="color:lightblue">заказать обратный звонок</a></p>
+        <div class="col-md-7 col-md-pull-3">
+            <nav>
+                <ul class="clearfix">
+                    <li class="active">
+                        <a class="nav-link" href="javascript:;">Главная</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="javascript:;">Каталоги</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/site/about">О нас</a>
+                    </li>
+                    <li>
+                        <a href="/site/contact">Контакты</a>
+                    </li>
+
+                    <li id="enter"><a class="nav-link disabled" href="/site/login">Вход</a></li>
+
+                </ul>
+            </nav>
         </div>
         <!--div class="social">
             <ul class="nav">
