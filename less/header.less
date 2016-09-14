@@ -1,15 +1,49 @@
 @import 'mixins.less';
-header
-{
 
-  min-height: 60px;
+.top-header {
+  min-height: 50px;
   position: fixed;
-  top:0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background: white;
+  z-index: 999;
+  padding: 15px 0;
+
+  .top_links {
+    font-size: @font-size;
+    float: left;
+    display: block;
+    width: 200px;
+  }
+  .soc_buttons {
+    margin-top: -8px;
+    line-height: 1;
+    float: right;
+  }
+
+  .client-icon {
+    float: left;
+    font-size: @font-size*1.1;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+
+  }
+}
+
+.middle-header
+{
+  min-height: 100px;
+  position: fixed;
+  top: 50px;
   left: 0;
   width: 100%;
   margin:0 ;
-
-  background-color: #767676;
+  background: #334048;
+  /*:url(../img/bg4.jpg) no-repeat top fixed;
+background-position: top center;*/
   z-index:999;
    .hdr
    {
@@ -22,7 +56,6 @@ header
     ul
     {
       list-style-type: none;
-      padding: 0;
       margin: 0;
 
     }
@@ -30,19 +63,24 @@ header
     {
       display: inline-block;
       list-style: none;
+      padding: 0 6px;
     }
     li a
     {
       text-decoration: none;
       color: #CCC;
       font-size: @font-size*1.2;
-      .btn;
       .transition;
     }
     li a:hover
     {
       color: #555;
     }
+
+    li:active {
+      color: #c0df16;
+    }
+
   }
   .main-menu {
     text-align: center;

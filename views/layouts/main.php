@@ -12,8 +12,6 @@ $this->beginPage() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Сайт автозапчастей"/>
     <link rel="icon" href="/favicon.png"/>
-    <title>Интернет-магазин автозапчастей</title>
-
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -21,7 +19,33 @@ $this->beginPage() ?>
 </head>
 <body>
 <?php $this->beginBody(); ?>
-<header>
+<header class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_links">
+                <button class="client-icon hidden-md hidden-lg hidden-sm">
+                    <i class="glyphicon glyphicon-user"></i>
+                </button>
+
+                <div class="auth-links">
+                    <a href="#">Вход</a>/<a href="#">Регистрация</a>
+                </div>
+            </div>
+            <div class="col-md-3 soc_buttons">
+                <a href="https://www.facebook.com/sharer.php?u=http://part.com.ua/get-assisted-experts-stay-loaded-online"
+                   target="_blank" class="social-icon"><span class="symbol">facebook</span></a>
+                <a href="https://twitter.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online"
+                   target="_blank" class="social-icon"><span class="symbol">twitter</span></a>
+                <a href="https://plus.google.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online"
+                   target="_blank" class="social-icon"><span class="symbol">googleplus</span></a>
+                <a href="https://pinterest.com/pin/create/bookmarklet/?url=http://part.com.ua/get-assisted-experts-stay-loaded-online&description=Get%20Assisted%20By%20Experts%20To%20Stay%20Loaded%20Online!"
+                   target="_blank" class="social-icon"><span class="symbol">pinterest</span></i></a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<header class="middle-header">
     <div class="container">
         <div class="row">
             <div class="hdr clearfix">
@@ -70,41 +94,21 @@ $this->beginPage() ?>
             </nav>
         </div>
         <!--div class="social">
-            <ul class="nav">
-                <li>
-                    <a href="https://www.facebook.com/sharer.php?u=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank"  class="social-icon"><span class="symbol">facebook</span></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">twitter</span></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/share?url=http://part.com.ua/get-assisted-experts-stay-loaded-online" target="_blank" class="social-icon"><span class="symbol">googleplus</span></a>
-                </li>
-                <li>
-                    <a href="https://pinterest.com/pin/create/bookmarklet/?url=http://part.com.ua/get-assisted-experts-stay-loaded-online&amp;description=Get%20Assisted%20By%20Experts%20To%20Stay%20Loaded%20Online!" target="_blank" class="social-icon"><span class="symbol">pinterest</span></i></a>
-                </li>
-            </ul>
+
         </div-->
     </div>
         </div>
 </header>
-<div style='clear:both'></div>
-<div class="container2">
-    <section>
-
-        <div class="row title" style="margin-bottom:100px;">
+<div class="clearfix title" style="margin:100px 0;">
             <div class="col-md-8 col-md-offset-2">
                 <h1>Все, что Вам нужно находится здесь!</h1>
                 <h2>любые запчасти на автомобиль.</h2>
-                <form action="find" id="findform" class="form-inline" role="search">
+                <form action="find" class="form-inline" role="form">
                     <input type="text" name="oem" value="" class="form-control" placeholder="VIN-код">
 
-                    <span class="find"><i class="glyphicon glyphicon-lupa"
-                                          onClick="document.forms[0].submit();"></i></span>
-                    <div style="clear:both;"></div>
-                <textarea placeholder="Список необходимых деталей" cols="80" rows="15">
+                    <span class="btn btn-info"><i class="glyphicon glyphicon-lupa"
+                                                  onClick="document.forms[0].submit();"></i>продолжить</span>
 
-                </textarea>
                 </form>
             </div>
         </div>
@@ -199,7 +203,7 @@ $this->beginPage() ?>
             <div class="col-12 title">
                 <h2>Отзывы наших клиентов</h2>
             </div>
-            <div class="feedback-box col-3" style="">
+            <div class="feedback-box col-3">
                 <div class="message">
                     Доволен чутким отношением к клиентам.
                 </div>
@@ -242,83 +246,81 @@ $this->beginPage() ?>
                 </div> <!-- / END CLIENT INFORMATION-->
             </div> <!-- / END SINGLE FEEDBACK BOX-->
         </div>
-
-    </section>
-    <footer>
-        <div class="col-3" style=" color: #FFF; text-align: center; padding: 10px;float:left">
-            <div>
-                <div class="SimpleText">
-                    <strong>Расписание работы</strong><br>
-                    Понедельник - пятница:&nbsp;с 9:00 до 17:00 (GMT +2)<br>
-                    Воскресенье: выходной день<br>
-                    Тел: +3801231231212<br>
-                    <strong>Обработка заказов -&nbsp;</strong>круглосуточно<br type="_moz">
-                </div>
+<footer>
+    <div class="col-3" style=" color: #FFF; text-align: center; padding: 10px;float:left">
+        <div>
+            <div class="SimpleText">
+                <strong>Расписание работы</strong><br>
+                Понедельник - пятница:&nbsp;с 9:00 до 17:00 (GMT +2)<br>
+                Воскресенье: выходной день<br>
+                Тел: +3801231231212<br>
+                <strong>Обработка заказов -&nbsp;</strong>круглосуточно<br type="_moz">
             </div>
         </div>
-        <div class="col-6 bottom-menu">
-            <div class="SimpleText">
-                <div class="row">
-                    <div class="col-6">
-                        <ul>
-                            <li>
-                                <a href="/instructions/how_to_begin">Как начать работу</a></li>
-                            <li>
-                                <a href="/instructions/how_to_order/search">Как искать товар</a></li>
-                            <li>
-                                <a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
-                            <li>
-                                <a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
-                            <li>
-                                <a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
-                            <li>
-                                <a href="/instructions/how_to_send">Как отправить товар</a></li>
-                            <li>
-                                <a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <ul>
-                            <li>
-                                <a href="/instructions/discount_sheet">Объемные скидки</a></li>
-                            <li>
-                                <a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
-                            <li>
-                                <a href="/instructions/web_services">Веб-сервисы</a></li>
-                            <li>
-                                <a href="/Page/termsandconditions">Договор сотрудничества</a></li>
-                            <li>
-                                <a href="/Page/about">О компании</a></li>
-                            <li>
-                                <a href="/Page/contacts">Контакты</a></li>
-                            <li>
-                                <a href="/ContentList/site_news">Архив новостей</a></li>
-                        </ul>
-                    </div>
+    </div>
+    <div class="col-6 bottom-menu">
+        <div class="SimpleText">
+            <div class="row">
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            <a href="/instructions/how_to_begin">Как начать работу</a></li>
+                        <li>
+                            <a href="/instructions/how_to_order/search">Как искать товар</a></li>
+                        <li>
+                            <a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
+                        <li>
+                            <a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
+                        <li>
+                            <a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
+                        <li>
+                            <a href="/instructions/how_to_send">Как отправить товар</a></li>
+                        <li>
+                            <a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
+                    </ul>
                 </div>
-
-
-            </div>
-
-
-            <div class="SimpleText">
-
-
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            <a href="/instructions/discount_sheet">Объемные скидки</a></li>
+                        <li>
+                            <a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
+                        <li>
+                            <a href="/instructions/web_services">Веб-сервисы</a></li>
+                        <li>
+                            <a href="/Page/termsandconditions">Договор сотрудничества</a></li>
+                        <li>
+                            <a href="/Page/about">О компании</a></li>
+                        <li>
+                            <a href="/Page/contacts">Контакты</a></li>
+                        <li>
+                            <a href="/ContentList/site_news">Архив новостей</a></li>
+                    </ul>
+                </div>
             </div>
 
 
         </div>
 
-        <footer class="footer">
-            <div class="container">
-                <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
-            </div>
-        </footer>
-        <noindex>
-            <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script>
-            <script type="text/javascript">var salesupwidgetcomuid = "1603";</script>
-        </noindex>
-        <?php $this->endBody() ?>
+
+        <div class="SimpleText">
+
+
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
+        </div>
+    </footer>
+    <noindex>
+        <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script>
+        <script type="text/javascript">var salesupwidgetcomuid = "1603";</script>
+    </noindex>
+    <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

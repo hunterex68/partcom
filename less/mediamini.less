@@ -1,12 +1,16 @@
-@media (max-width:@device-midi)
+@media (max-width: @device-mini)
 {
+	.auth-links {
+		display: none;
+		background-color: inherit;
+		vertical-align: middle;
+	}
 	header
 	{
 		position:fixed;
 		height: 150px;
 	    line-height: 18px;
 	    font-size: @font-size;
-	    position: fixed;
 	    top: 0;
 	    left: 0;
 	    width: 100%;
@@ -20,15 +24,12 @@
 				list-style: none;
 				float:left; 
 				padding:2px;
-				.btn;
 				width:40%;
 				border:1px solid @gray-color;
 			}
 			li a
 			{
 				text-decoration: none;
-				color:white;
-				.btn;
 			}
 		}			
 	}

@@ -3,13 +3,6 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
-.btn {
-  padding: 10px 5px;
-}
-.btn-success {
-  background-color: #119911;
-  color: #29e729;
-}
 .transition {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -210,7 +203,6 @@ input {
   border: 2px solid black;
   letter-spacing: 0.15em;
   display: inline-block;
-  border-radius: 60px;
   cursor: pointer;
   text-align: center;
   padding: 0 15px;
@@ -221,7 +213,6 @@ input {
   border: 2px solid black;
   letter-spacing: 0.15em;
   display: inline-block;
-  border-radius: 60px;
   cursor: pointer;
   text-align: center;
   padding: 0 15px;
@@ -314,7 +305,7 @@ input {
 .social {
   float: right;
 }
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
   header {
     position: fixed;
     height: 250px;
@@ -328,7 +319,6 @@ input {
     list-style: none;
     float: left;
     padding: 4px;
-    padding: 10px 5px;
     width: 45%;
     margin: 2px;
     background-color: #119911;
@@ -352,12 +342,17 @@ input {
     width: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .auth-links {
+    display: none;
+    background-color: inherit;
+    vertical-align: middle;
+  }
   header {
+    position: fixed;
     height: 150px;
     line-height: 18px;
     font-size: 16px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -368,14 +363,11 @@ input {
     list-style: none;
     float: left;
     padding: 2px;
-    padding: 10px 5px;
     width: 40%;
     border: 1px solid #999999;
   }
   header .nav li a {
     text-decoration: none;
-    color: white;
-    padding: 10px 5px;
   }
   header::before {
     content: '';
