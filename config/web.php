@@ -13,6 +13,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'TBOjyqIrtCy28-yOwYrpPQG0sjn__hjX',
+			
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -48,7 +49,11 @@ $config = [
             'rules' => [
             ],
         ],
-        
+        /*'assetManager' => [
+		
+			'basePath' => '@webroot/assets',
+			'baseUrl' => 'assets',
+		],*/
     ],
     'params' => $params,
 ];

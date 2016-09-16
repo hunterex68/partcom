@@ -3,6 +3,8 @@ use app\assets\AppAsset;
 use yii\helpers\Html;
 
 AppAsset::register($this);
+//\yii\web\JqueryAsset::register($this);
+
 $this->beginPage() ?>
 
 <!DOCTYPE html>
@@ -178,7 +180,7 @@ $this->beginPage() ?>
             </div>
         </div>
         <?= $content ?>
-        <div class="title" style="padding:50px 0;">
+        <div class="title" style="padding:50px 0;" id="title">
             <h2>У вас остались вопросы?</h2>
 
             <div role="form" class="feedback">
@@ -199,11 +201,11 @@ $this->beginPage() ?>
                 </form>
             </div>
         </div>
-        <div class="otzyv">
-            <div class="col-12 title">
+        <div class="otzyv clearfix">
+            <div class="col-md-12 ">
                 <h2>Отзывы наших клиентов</h2>
             </div>
-            <div class="feedback-box col-3">
+            <div class="feedback-box col-md-3">
                 <div class="message">
                     Доволен чутким отношением к клиентам.
                 </div>
@@ -216,9 +218,9 @@ $this->beginPage() ?>
                     </div>
                 </div> <!-- / END CLIENT INFORMATION-->
             </div> <!-- / END SINGLE FEEDBACK BOX-->
-            <div class="feedback-box col-3">
+            <div class="feedback-box col-md-3">
                 <div class="message">
-                    Адекватные люди всегда перезванивают если видят, что у них на телефоне пропущенные вызовы!
+                    Адекватные люди. Всегда перезванивают если видят, что у них на телефоне пропущенные вызовы!
                 </div>
                 <div class="client">
                     <div class="quote red-text">
@@ -230,7 +232,7 @@ $this->beginPage() ?>
                     </div>
                 </div> <!-- / END CLIENT INFORMATION-->
             </div> <!-- / END SINGLE FEEDBACK BOX-->
-            <div class="feedback-box col-3">
+            <div class="feedback-box col-md-3">
                 <div class="message">
                     Всегда помогают в подборе деталей, всегда вежливые, если обещали перезвонить, обязательно перезванивают. Всегда оговаривают сроки доставки, знаешь на что расчитывать
                 </div>
@@ -247,7 +249,7 @@ $this->beginPage() ?>
             </div> <!-- / END SINGLE FEEDBACK BOX-->
         </div>
 <footer>
-    <div class="col-3" style=" color: #FFF; text-align: center; padding: 10px;float:left">
+    <div class="col-md-3" style=" color: #FFF; text-align: center; padding: 10px;float:left">
         <div>
             <div class="SimpleText">
                 <strong>Расписание работы</strong><br>
@@ -258,10 +260,10 @@ $this->beginPage() ?>
             </div>
         </div>
     </div>
-    <div class="col-6 bottom-menu">
+    <div class="col-md-6 bottom-menu">
         <div class="SimpleText">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <ul>
                         <li>
                             <a href="/instructions/how_to_begin">Как начать работу</a></li>
@@ -279,7 +281,7 @@ $this->beginPage() ?>
                             <a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
                     </ul>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <ul>
                         <li>
                             <a href="/instructions/discount_sheet">Объемные скидки</a></li>
@@ -302,24 +304,12 @@ $this->beginPage() ?>
 
         </div>
 
-
-        <div class="SimpleText">
-
-
-        </div>
-
-
     </div>
-
-    <footer class="footer">
-        <div class="container">
+    <div class="container">
             <p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
         </div>
     </footer>
-    <noindex>
-        <script type="text/javascript" src="//cabinet.salesupwidget.com/php/1.js" charset="UTF-8" async></script>
-        <script type="text/javascript">var salesupwidgetcomuid = "1603";</script>
-    </noindex>
+
     <?php $this->endBody() ?>
 </body>
 </html>
