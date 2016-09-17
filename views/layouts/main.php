@@ -284,68 +284,59 @@ $this->beginPage() ?>
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3" style=" color: #FFF; text-align: center; padding: 10px;float:left">
+			<div class="col-md-4" style=" color: #FFF;  padding: 10px;">
 
-				<div class="SimpleText">
-					<strong>Расписание работы</strong><br>
-					Понедельник - пятница:<br>с 9:00 до 17:00 (GMT +2)<br>
-					Воскресенье: выходной день<br>
-					Тел: +3801231231212<br>
-					<strong>Обработка заказов -&nbsp;</strong>круглосуточно<br>
-				</div>
+
+				<strong>Расписание работы</strong><br>
+				Понедельник - пятница:<br>с 9:00 до 17:00 (GMT +2)<br>
+				Воскресенье: выходной день<br>
+				Тел: +3801231231212<br>
+				<strong>Обработка заказов -&nbsp;</strong>круглосуточно<br>
+
 
 			</div>
-			<div class="col-md-6 bottom-menu">
-				<div class="SimpleText">
-					<div class="row">
-						<div class="col-md-6">
-							<ul>
-								<li>
-									<a href="/instructions/how_to_begin">Как начать работу</a></li>
-								<li>
-									<a href="/instructions/how_to_order/search">Как искать товар</a></li>
-								<li>
-									<a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
-								<li>
-									<a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
-								<li>
-									<a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
-								<li>
-									<a href="/instructions/how_to_send">Как отправить товар</a></li>
-								<li>
-									<a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul>
-								<li>
-									<a href="/instructions/discount_sheet">Объемные скидки</a></li>
-								<li>
-									<a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
-								<li>
-									<a href="/instructions/web_services">Веб-сервисы</a></li>
-								<li>
-									<a href="/Page/termsandconditions">Договор сотрудничества</a></li>
-								<li>
-									<a href="/Page/about">О компании</a></li>
-								<li>
-									<a href="/Page/contacts">Контакты</a></li>
-								<li>
-									<a href="/ContentList/site_news">Архив новостей</a></li>
-							</ul>
-						</div>
-					</div>
-
-
-				</div>
-
+			<div class="col-md-2">
+				<ul>
+					<li>
+						<a href="/instructions/how_to_begin">Как начать работу</a></li>
+					<li>
+						<a href="/instructions/how_to_order/search">Как искать товар</a></li>
+					<li>
+						<a href="/instructions/how_to_order/basket">Как работать с корзиной</a></li>
+					<li>
+						<a href="/instructions/how_to_order/order">Как оформить заказ</a></li>
+					<li>
+						<a href="/instructions/how_to_pay">Как оплатить заказ</a></li>
+					<li>
+						<a href="/instructions/how_to_send">Как отправить товар</a></li>
+					<li>
+						<a href="/instructions/how_to_ask_question">Как задать вопрос менеджеру</a></li>
+				</ul>
 			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
-				</div>
+			<div class="col-md-2">
+				<ul>
+					<li>
+						<a href="/instructions/discount_sheet">Объемные скидки</a></li>
+					<li>
+						<a href="/instructions/pricelists_sheet">Типы прайслистов</a></li>
+					<li>
+						<a href="/instructions/web_services">Веб-сервисы</a></li>
+					<li>
+						<a href="/Page/termsandconditions">Договор сотрудничества</a></li>
+					<li>
+						<a href="/Page/about">О компании</a></li>
+					<li>
+						<a href="/Page/contacts">Контакты</a></li>
+					<li>
+						<a href="/ContentList/site_news">Архив новостей</a></li>
+				</ul>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<p class="pull-left">&copy; PartCom <?= date('Y') ?></p>
+			</div>
+		</div>
 </footer>
 
 <?php $this->endBody() ?>
