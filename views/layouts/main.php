@@ -45,36 +45,33 @@ $this->beginPage() ?>
             </div>
         </div>
     </div>
-
 </header>
 <header class="middle-header">
     <div class="container">
         <div class="row">
             <div class="hdr clearfix">
-        <div class='col-md-2 logo'>LANA</div>
-        <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
-            <a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
-
-        </div-->
-        <div class="col-md-3 col-md-push-7 rightphone">
-            <div class="phones">
-                <div class="phone">
-                    <i class="glyphicon glyphicon-phone"></i>
-                    +38 (050)32-555-23</a>
+                <div class='col-md-2 logo'>LANA</div>
+                <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
+					<a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
+				</div-->
+                <div class="col-md-3 col-md-push-7 rightphone hidden-xs">
+                    <div class="phones">
+                        <div class="phone">
+                            <i class="glyphicon glyphicon-phone"></i>
+                            +38 (050)32-555-23
+                        </div>
+                        <div class="phone">
+                            <i class="glyphicon glyphicon-phone"></i>
+                            +38 (067)67-67-464
+                        </div>
+                        <div class="phone">
+                            <i class="glyphicon glyphicon-phone"></i>
+                            +38 (093)939-68-68
+                        </div>
+                        <a href="#" class="callback">Заказать обратный вызов</a>
+                    </div>
                 </div>
-                <div class="phone">
-                    <i class="glyphicon glyphicon-phone"></i>
-                    +38 (067)67-67-464
-                </div>
-                <div class="phone">
-                    <i class="glyphicon glyphicon-phone"></i>
-                    +38 (093)939-68-68
-                </div>
-                <a href="#" class="callback">Заказать обратный вызов</a>
-            </div>
-
-        </div>
-        <div class="col-md-7 col-md-pull-3">
+                <div class="col-md-7 col-md-pull-3 hidden-xs">
             <nav style="text-align: center" class="clearfix">
                 <ul class="main-menu">
                     <li class="active">
@@ -95,21 +92,29 @@ $this->beginPage() ?>
                 </ul>
             </nav>
         </div>
-        <!--div class="social">
-
-        </div-->
-    </div>
+                <div id='sandwich' class='hidden-lg hidden-md hidden-sm'>
+                    <div class='sw-topper'></div>
+                    <div class='sw-bottom'></div>
+                    <div class='sw-footer'></div>
+                </div>
+            </div>
         </div>
+    </div>
 </header>
-<div class="clearfix title" style="margin:100px 0;">
+<div class="clearfix title toptitle">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Все, что Вам нужно находится здесь!</h1>
-                <h2>любые запчасти на автомобиль.</h2>
+                <h1 class="hidden-xs">Все, что Вам нужно находится здесь!</h1>
+                <h2 class="hidden-xs">любые запчасти на автомобиль.</h2>
                 <form action="find" class="form-inline" role="form">
-                    <input type="text" name="oem" value="" class="form-control" placeholder="VIN-код">
+                    <input type="text" name="oem" value="" pattern="[A-Za-z0-9]{17}" class="form-control" id="vin"
+                           placeholder="VIN-код">
 
-                    <span class="btn btn-info"><i class="glyphicon glyphicon-lupa"
-                                                  onClick="document.forms[0].submit();"></i>продолжить</span>
+                    <button class="btn btn-success" onClick="document.forms[0].submit();">
+                        продолжить&nbsp;
+                        <span>
+                            &#187;
+                        </span>
+                    </button>
 
                 </form>
             </div>
@@ -118,13 +123,13 @@ $this->beginPage() ?>
         <div class="content-wellcom">
             <div class="content-info clearfix">
 
-                <div class="col-12 title">
+                <div class="col-md-12 title">
 
                     <h2>НАШИ ПРЕИМУЩЕСТВА НАД КОНКУРЕНТАМИ</h2>
 
                 </div>
 
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>1. Невысокая цена</h2>
                         80% предложений на рынке - посредники. И посредники посредников. Соответственно наценка
@@ -132,7 +137,7 @@ $this->beginPage() ?>
                     </div>
                 </div>
 
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>2. Нет скрытых платежей</h2>
 
@@ -141,7 +146,7 @@ $this->beginPage() ?>
                     </div>
                 </div>
 
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>3. Ценим клиента</h2>
 
@@ -151,7 +156,7 @@ $this->beginPage() ?>
                     </div>
                 </div>
 
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>4. Профессионализм</h2>
 
@@ -159,7 +164,7 @@ $this->beginPage() ?>
                         товара позволяют нам гарантировать качество продукции и своевременную доставку каждой партии
                     </div>
                 </div>
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>5. Большой опыт</h2>
 
@@ -169,7 +174,7 @@ $this->beginPage() ?>
                     </div>
                 </div>
 
-                <div class="col-3 pan">
+                <div class="col-md-3 pan">
                     <div class="text-center">
                         <h2>6. Только качество</h2>
 
@@ -194,7 +199,7 @@ $this->beginPage() ?>
 
                         <input type="text" size="80px" name="subject" value="" class="inputctrl" placeholder="Тема">
 
-                        <textarea name="message" cols="80" rows="10" class="inputctrl"></textarea>
+                        <textarea title="Сообщение" name="message" cols="80" rows="10" class="inputctrl"></textarea>
                         <br/>
                         <input type="submit" value="Отправить" class=" inputctrl btn btn-success">
                     </div>
@@ -256,7 +261,7 @@ $this->beginPage() ?>
                 Понедельник - пятница:&nbsp;с 9:00 до 17:00 (GMT +2)<br>
                 Воскресенье: выходной день<br>
                 Тел: +3801231231212<br>
-                <strong>Обработка заказов -&nbsp;</strong>круглосуточно<br type="_moz">
+                <strong>Обработка заказов -&nbsp;</strong>круглосуточно<br>
             </div>
         </div>
     </div>
