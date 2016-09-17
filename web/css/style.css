@@ -224,16 +224,6 @@ input {
   height: 0;
   clear: both;
 }
-#title {
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: initial;
-  transition-delay: initial;
-}
 /*
 .title
 	-webkit-animation: title 500ms ease-in;

@@ -24,14 +24,21 @@ $this->beginPage() ?>
 <header class="top-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 top_links">
+
+            <div class="col-md-4 top_links">
                 <button class="client-icon hidden-md hidden-lg hidden-sm">
                     <i class="glyphicon glyphicon-user"></i>
                 </button>
-
+                <button href="basket" class="basket">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                </button>
                 <div class="auth-links">
                     <a href="#">Вход</a>/<a href="#">Регистрация</a>
                 </div>
+            </div>
+            <div class="col-md-5 top_links">
+                <input type="text" class="form-control" style="width: 300px;" placeholder="код детали">
+                <button class="btn btn-primary">найти</button>
             </div>
             <div class="col-md-3 soc_buttons">
                 <a href="https://www.facebook.com/sharer.php?u=http://part.com.ua/get-assisted-experts-stay-loaded-online"
@@ -51,9 +58,7 @@ $this->beginPage() ?>
         <div class="row">
             <div class="hdr clearfix">
                 <div class='col-md-2 logo'>LANA</div>
-                <!--div style="width:100%;text-align:right;margin:0;background-color:white;color:#2e6da4;line-height: 20px;">
-					<a href="basket"><span style="padding:10px;" class="glyphicon glyphicon-shopping-cart"></span></a>
-				</div-->
+
                 <div class="col-md-3 col-md-push-7 rightphone hidden-xs">
                     <div class="phones">
                         <div class="phone">
@@ -91,6 +96,7 @@ $this->beginPage() ?>
 
                 </ul>
             </nav>
+
         </div>
                 <div id='sandwich' class='hidden-lg hidden-md hidden-sm'>
                     <div class='sw-topper'></div>
@@ -185,26 +191,28 @@ $this->beginPage() ?>
             </div>
         </div>
         <?= $content ?>
-        <div class="title" style="padding:50px 0;" id="title">
+<div class="title container" style="padding:50px 0;" id="title">
+    <div class="row">
             <h2>У вас остались вопросы?</h2>
 
-            <div role="form" class="feedback">
-                <form action="feedback" method="post" class="form">
-                    <div style="margin:0 30%;position:relative;text-align:center">
-                        <input type="text" size="80px" name="name" value="" class="inputctrl" required
+        <div class="col-md-8 col-md-offset-2">
+            <form role="form" action="feedback" method="post" class="form">
+
+                <input type="text" size="80px" name="name" value="" class="form-control" required
                                placeholder="Ваше имя">
 
-                        <input type="email" size="80px" name="email" value="" class="inputctrl" required
-                               placeholder="Ваш E-mail">
+                <input type="email" size="80px" name="email" value="" class="form-control" required
+                       placeholder="Ваш E-mail">
 
-                        <input type="text" size="80px" name="subject" value="" class="inputctrl" placeholder="Тема">
+                <input type="text" size="80px" name="subject" value="" class="form-control" placeholder="Тема">
 
-                        <textarea title="Сообщение" name="message" cols="80" rows="10" class="inputctrl"></textarea>
+                <textarea title="Сообщение" name="message" cols="80" rows="10" class="form-control"></textarea>
                         <br/>
-                        <input type="submit" value="Отправить" class=" inputctrl btn btn-success">
-                    </div>
-                </form>
+                <input type="submit" value="Отправить" class=" btn btn-success">
+
+            </form>
             </div>
+    </div>
         </div>
         <div class="otzyv clearfix">
             <div class="col-md-12 ">

@@ -8,7 +8,7 @@ $(document).ready(
             $("#sandwich").toggleClass("active");
         });
 
-        $("#title").waypoint(function (direction) {
+        /*$("#title").waypoint(function (direction) {
             
             if (direction == "down") {
 
@@ -29,11 +29,11 @@ $(document).ready(
             else if (direction === "up") {
                 $('#toptitle').removeClass('animated fadeInDown');
             }
-        }, {offset: "100%"});
+         }, {offset: "100%"});*/
     });
 
-
-/*function testAnim(x) {
+/*
+ function testAnim(x) {
  $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
  $(this).removeClass();
  });
