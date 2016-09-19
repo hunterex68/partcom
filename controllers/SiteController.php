@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
+use app\models\seoTexts;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -60,7 +61,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new seoTexts();
+        $data = [];
+        $data['mainseotext'] = $model->getMainSeoText();
+        $data['seotext'] = $model->getSeoText();
+
+        return $this->render('index', ['model' => $data]);
     }
 
     /**

@@ -17,9 +17,9 @@ $this->title = 'My Yii Application';
 
                     <button class="btn btn-success" onClick="document.forms[0].submit();">
                         продолжить&nbsp;
-                                <span>
-                                    &#187;
-                                </span>
+                            <span>
+                                &#187;
+                            </span>
                     </button>
                 </form>
             </div>
@@ -31,9 +31,9 @@ $this->title = 'My Yii Application';
 
                     <button class="btn btn-primary" onClick="document.forms[0].submit();">
                         Найти!
-                                <span>
-                                    &#187;
-                                </span>
+                            <span>
+                                &#187;
+                            </span>
                     </button>
                 </form>
 
@@ -59,7 +59,6 @@ $this->title = 'My Yii Application';
                     составляет от 100 до 300%. Наша цена устанавливается непосредственно как цена производителя
                 </div>
             </div>
-
             <div class="col-md-3 pan">
                 <div class="text-center">
                     <h2>2. Нет скрытых платежей</h2>
@@ -68,7 +67,6 @@ $this->title = 'My Yii Application';
                     надбавка идет за любые дополнительные расходы. Деньги теряете Вы. У нас нет скрытых платежей!
                 </div>
             </div>
-
             <div class="col-md-3 pan">
                 <div class="text-center">
                     <h2>3. Ценим клиента</h2>
@@ -78,7 +76,6 @@ $this->title = 'My Yii Application';
                     транспорт по минимальной цене, проложив при этом оптимальный маршрут до пункта назначения
                 </div>
             </div>
-
             <div class="col-md-3 pan">
                 <div class="text-center">
                     <h2>4. Профессионализм</h2>
@@ -96,7 +93,6 @@ $this->title = 'My Yii Application';
                     уже в течение тридцати лет
                 </div>
             </div>
-
             <div class="col-md-3 pan">
                 <div class="text-center">
                     <h2>6. Только качество</h2>
@@ -109,14 +105,55 @@ $this->title = 'My Yii Application';
     </div>
 </div>
 <div class="seo">
-    <div class="jumbotron">
-        <h1>SEO-текст</h1>
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-    <div class="body-content well">
-        <div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <?php
+                    if (!empty($model['mainseotext'])) :?>
+
+                        <h1>
+
+                            <?php echo $model['mainseotext']->header; ?>
+
+                        </h1>
+                        <p class="lead">
+
+                            <?php echo $model['mainseotext']->paragraph; ?>
+
+                        </p>
+
+                    <?php else : ?>
+                        <h1>SEO-текст</h1>
+                        <p class="lead">You have successfully created your Yii-powered application.</p>
+                    <?php endif; ?>
+                    <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
             <div class="row">
+                <?php
+                if (!empty($model['seotext'])) :?>
+                    <? foreach ($model['seotext'] as $text): ?>
+                        <div class="col-lg-4">
+                            <h1>
+
+                                <?php echo $text->header; ?>
+
+                            </h1>
+                            <p>
+
+                                <?php echo $text->paragraph; ?>
+
+                            </p>
+                            <p>
+                                <a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii
+                                    Documentation &raquo;</a>
+                            </p>
+                        </div>
+                    <? endforeach; ?>
+                <?php else : ?>
                 <div class="col-lg-4">
                     <h2>Heading</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -158,7 +195,8 @@ $this->title = 'My Yii Application';
                     <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii
                             Extensions &raquo;</a></p>
                 </div>
-            </div>
+                <?php endif; ?>
+        </div>
         </div>
     </div>
 </div>
