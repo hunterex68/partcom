@@ -232,6 +232,7 @@ $this->title = 'My Yii Application';
                 <h2>Отзывы наших клиентов</h2>
             </div>
         </div>
+
         <div class="row">
             <div class="feedback-box col-md-3">
                 <div class="message">
